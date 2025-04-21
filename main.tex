@@ -163,6 +163,47 @@
 \begin{document}
 	\maketitle
 \tableofcontents
+\section{ Constraint $b\cdot P \neq 0$ for ($P_1=-1$)}
+From
+\begin{align}
+    \frac{v \tcdot b}{v \tcdot P} = b \tcdot P \frac{R(\zetahat^2)}{\mN^2}
+\end{align}
+We have,
+\begin{align}
+    b_{1}|v|\left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]=\vec{v}_{T}\cdot\vec{b}_{T}
+\end{align}
+let $\vec{v}_{T}=(0,v_{3})$ and $\vec{b}_{T}=(b_{2},0)$
+\begin{align}
+    \mN &= 1067\text{ MeV};~~~~P_{1}=-\frac{2\pi}{L}=-\frac{2\pi}{32\times 0.114\text{ fm}}=-339.3\text{ MeV},
+\end{align}
+then
+\begin{align}
+   \Longrightarrow \left[\frac{P_{1}}{m_{N}}\left(\hat{\zeta}-\sqrt{\hat{\zeta}^2+1}\right)+\hat{\zeta}\frac{m_{N}}{P_{1}}\right]&=0\\
+    \Longrightarrow \hat{\zeta} &=\sqrt{\frac{P_{1}^2}{m_{N}^{2}\left(\frac{m_{N}^{2}}{P_{1}^{2}}+2\right)}}\\
+    \Aboxed{\hat{\zeta} &= \pm 0.0922238}.
+\end{align}
+Now,
+\begin{align}
+    \hat{\zeta}&=\frac{-v_{1}P_{1}}{|v|\mN}=\frac{-v_{1}P_{1}}{\left(\sqrt{v_{1}^{2}+0^{2}+v_{3}^{2}}\right)m_{N}}
+\end{align}
+on solving for $v_{1}$,
+\begin{align}
+    \Longrightarrow\Aboxed{v_{1}=\pm 0.303023~v_{3}}
+\end{align}
+So, we have
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+       $\vect{\bvec}/a$  &  $\eta v/a$ & $P\cdot aL/(2\pi)$\\
+       \hline
+        $(b_{1},b_{2},0)$ & $\pm n^{\prime}\cdot(v_{1},0,v_{3})$  & $(-1,0,0)$\\
+        \hline
+    \end{tabular}
+    \caption{Parameters of Lattice QCD calculations}
+    \label{tab:my_label}
+\end{table}
+
 \section{Generalized Sivers Shift}
 \subsection{Deriving $\widetilde \Phi^{[\gamma^+]}$}
 Let's start with the parametrization of the correlator\footnote{Musch, B. U., Hägler, P., Engelhardt, M., Negele, J. W., $\&$ Schäfer, A. (2011). Sivers and Boer-Mulders observables from lattice QCD. ArXiv. https://doi.org/10.1103/PhysRevD.85.094510},
@@ -390,7 +431,7 @@ Because of Eq.\ \eqref{conditi_hermitian}, provided we have the amplitudes for b
 \end{align}
 
 \pagebreak
-\section{Lattice calculations}
+\section{Lattice calculations (new data)}
 The lattice setup is $P^{\mu}=(E_N, -|\vec{P}^1|,0,0)$, $b^{\mu}=(0,b_{1},b_{2},0)$, $v^{\mu}=\pm n^{\prime}(0,v_{1},0,v_{3})$, $S^{\mu}=(0,0,0,1)$:
 \subsection{Sivers $\tAmp_{12B}$}
 \subsubsection{$\tAmp^{\text{Re}}_{12B}=\tAmp^{\text{(b-even)}}_{12B}$}
@@ -558,4 +599,6 @@ then
     \caption{Plot of $\langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,\textcolor{blue}{x},\zetahat,\eta v \tcdot P) $ for ($P_{1} = -1$ , $\eta=8$)}
     \label{fig:enter-label}
 \end{figure}
+
+\section{Lattice calculations (old data)}
 \end{document}
