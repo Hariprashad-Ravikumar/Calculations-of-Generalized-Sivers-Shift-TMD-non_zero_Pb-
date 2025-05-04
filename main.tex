@@ -163,7 +163,11 @@
 \begin{document}
 	\maketitle
 \tableofcontents
-\section{Goal}
+\section{Goal: Extension to include the dependence on $x=\frac{k^{+}}{P^{+}}$}
+\begin{align}
+    \frac{1}{2} \bra{P,S}\ \bar{q}(0)\ \gamma^{+}\ \WlineC{\mathcal{C}_\bvec}\ q(\bvec)\ \ket{P,S}=2P^{+}\left(\textcolor{red}{\tAmp_{2B} }
+		+ i \mN \epsilon_{ij} \vect{\bvec}_i \vect{S}_j\, \textcolor{red}{\tAmp_{12B} }\right)
+\end{align}
 Our goal is extract the Sivers-shift as a function of momentum fraction $x$
 \begin{align}
    \Longrightarrow~ \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,\textcolor{blue}{x},\zetahat,\eta v \tcdot P) 
@@ -690,6 +694,52 @@ where,
 \begin{align}
     \Aboxed{R(\zetahat^2) \equiv 1- \sqrt{1 + \hat \zeta^{-2}}}
 \end{align}
+
+\section{Lattice calculations ($\tAmp_{2B}$ for $\eta=0$)}
+\subsubsection{$\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\linewidth]{bLbT_A2B_b_even_P1_-1_eta_0.pdf}
+    \caption{Plot of  $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -1$ , $\eta=0$)}
+\end{figure}
+
+And below is the plot of $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$,
+\begin{figure}[h!]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{bP_A2B_b_even_P1_-1_eta_0.pdf}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{bsq_A2B_b_even_P1_-1_eta_0.pdf}
+     \end{subfigure}
+        \caption{Plot of $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=0$)}
+\end{figure}
+
+\subsubsection{$\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\linewidth]{bLbT_A2B_b_odd_P1_-1_eta_0.pdf}
+    \caption{Plot of  $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -1$ , $\eta=0$)}
+\end{figure}
+
+\pagebreak
+
+And below is the plot of $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$,
+\begin{figure}[h!]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{bP_A2B_b_odd_P1_-1_eta_0.pdf}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{bsq_A2B_b_odd_P1_-1_eta_0.pdf}
+     \end{subfigure}
+        \caption{Plot of $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=0$)}
+\end{figure}
+
 
 
 \section{Lattice calculations (new data)}
