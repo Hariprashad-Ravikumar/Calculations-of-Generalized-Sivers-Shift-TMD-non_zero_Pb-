@@ -1169,7 +1169,68 @@ And below is the plot of $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ fo
         \caption{Plot of $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -4$ , $\eta=8$)}
 \end{figure}
 
+\subsection{Analysis}
+It appears that the imaginary parts of both $\tAmp^{\text{Im}}_{12B}$ and $\tAmp^{\text{Im}}_{2B}$ are compatible with zero, then the analysis reduced to 
+\begin{align}
+   \Longrightarrow~ \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,\textcolor{blue}{x},\zetahat,\eta v \tcdot P) 
+	&\ \equiv\ \mN \frac{\tilde f_{1T}^{\perp(1)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)}\\
+ &=-m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \textcolor{red}{\tAmp_{12B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}}{\int d(b\cdot P)e^{ix(b\cdot P)}\textcolor{red}{\tAmp_{2B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}}\\
+ &=-m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \textcolor{red}{\tAmp_{12B}^{\text{Re}}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}}{\int d(b\cdot P)e^{ix(b\cdot P)}\textcolor{red}{\tAmp_{2B}^{\text{Re}}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}}.
+\end{align}
+\subsubsection{Fit}
+On fitting $\tAmp_{12B}^{\text{Re}}$ as in
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{fitA12B.pdf}
+\end{figure}
+\begin{figure}[h!]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Pbfit_A12B_b_bnum_P1_-1_eta_8.pdf}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{bsqfit_A12B_b_bnum_P1_-1_eta_8.pdf}
+     \end{subfigure}
+        \caption{Fit-Plot of $\tAmp^{\text{Re}}_{12B}=\tAmp^{\text{(b-even)}}_{12B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=8$)}
+\end{figure}
 
+And on fitting $\tAmp_{2B}^{\text{Re}}$ as in
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{fitA2B.pdf}
+\end{figure}
+\begin{figure}[h!]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Pbfit_A2B_b_bnum_P1_-1_eta_8.pdf}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{bsqfit_A2B_b_bnum_P1_-1_eta_8.pdf}
+     \end{subfigure}
+        \caption{Fit-Plot of $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=8$)}
+\end{figure}
+
+And on fitting $\tAmp_{2B}^{\text{Im}}$ as in
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{fitA2B.pdf}
+\end{figure}
+\begin{figure}[h!]
+     \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Pbfit_A2B_b_bnum_P1_-1_eta_8.pdf}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.45\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{bsqfit_A2B_b_bnum_P1_-1_eta_8.pdf}
+     \end{subfigure}
+        \caption{Fit-Plot of $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=8$)}
+\end{figure}
 
 
 \end{document}
