@@ -43,6 +43,8 @@
 \newcommand{\latcfn}{\ensuremath{C}}
 \usepackage{graphicx}
 \newcommand{\tpm}{\ensuremath{{\,\pm\,}}}
+%\usepackage{markdown}
+\usepackage[hybrid]{markdown}
 
 \newcommand{\prp}{\perp}
 \newcommand{\transp}{\mathsf{T}}
@@ -207,7 +209,7 @@ For any of the transformations $\mathcal{T} \in \{ L, P, T, \dagger \}$, the Eqs
 \begin{equation}
 	\mathcal{T}_\Phi\left(\Phi(\kei,w)\right) = \Phi\left(\mathcal{T}_\kei(\kei),\mathcal{T}_w(w)\right)
 \end{equation}
-where we have omitted the subscript ``unsub'' and the renormalization scale $\mu$, and where the symbol $w$ summarizes all dependences on $\GammaOp$, $P$, $S$ and $v$. Here $\mathcal{T}_\Phi$ is either the identity function or complex conjugation.  The transformation rule $\mathcal{T}_\kei(\kei)$ maps onto $\Lambda \kei$, $\kei$ or $\overline{\kei}$ and thus fulfills $a \tcdot b = \mathcal{T}_\kei(a) \tcdot \mathcal{T}_\kei(b)$ for any two vectors $a$ and $b$. The Fourier-transformed correlator 
+where we have omitted the subscript ``unsub'' and the renormalization scale $\mu$, and where the symbol $w$ summarizes all dependences on $\GammaOp$, $P$, $S$ and $v$. Here $\mathcal{T}_\Phi$ is either the identity function or complex conjugation. The transformation rule $\mathcal{T}_\kei(\kei)$ maps onto $\Lambda \kei$, $\kei$ or $\overline{\kei}$ and thus fulfills $a \tcdot b = \mathcal{T}_\kei(a) \tcdot \mathcal{T}_\kei(b)$ for any two vectors $a$ and $b$. The Fourier-transformed correlator 
 \begin{equation}
 	\widetilde{\Phi}(\elll,w) =  \int d^4 \kei \ e^{-i \kei \tcdot \elll} \Phi(\kei, w)
 \end{equation}
@@ -314,7 +316,7 @@ Let's start with the parametrization of the correlator\footnote{Musch, B. U., HÃ
 		~~- \frac{\mN^3}{v \tcdot P} (\bvec \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha v_\beta\, \tBmp_9
 		- \frac{i \mN^3}{(v \tcdot P)^2} (v \tcdot S) \epsilon^{\mu \nu \alpha \beta} P_\nu \bvec_\alpha v_\beta \tBmp_{10}
 \end{align}
- For the lattice calculations, it is however advantageous to start with an equivalent parametrization in which the structures explicitly depend on the staple extent $\eta$ and which is still well-defined for $v \tcdot P = 0$. Such a parametrization can be obtained from the parametrization above by replacing $v \rightarrow \eta v$ and by leaving out the factors $(v \tcdot P)^{-n}$. 
+ For the lattice calculations, it is, however, advantageous to start with an equivalent parametrization in which the structures explicitly depend on the staple extent $\eta$ and which is still well-defined for $ v\cdot P = 0$. Such a parametrization can be obtained from the parametrization above by replacing $v \rightarrow \eta v$ and by leaving out the factors $(v \tcdot P)^{-n}$. 
  \begin{align}
     \frac{1}{2}\widetilde \Phi^{[\gamma^\mu]}_{\unsub}=\frac{1}{2} R_{\gamma^{\mu}} E_N & =  
 		P^\mu\, \tilde a_2 - i \mN^2 \bvec^\mu\, \tilde a_3
@@ -449,7 +451,7 @@ then
     \end{pmatrix}
 \end{align}
 \subsection{case 1: Flipping the whole $\bvec$}
-let's now decompose them into real and imaginary parts for correlators, for positive $b$, we have 
+Let's now decompose them into real and imaginary parts for correlators. For positive $b$, we have 
 \begin{align}
     \begin{pmatrix}
         \rule{0pt}{16pt} \mathfrak{Re}\{ R_{\Gamma(1)}\}^{[+b]} \\
@@ -643,7 +645,7 @@ Similarly,  $b-$odd part as $\frac{R^{[+b]}-R^{[-b]}}{2}$,
       \rule{0pt}{16pt} \tilde a^{\text{Im}}_2
     \end{pmatrix}
 \end{align}
-to form Sivers shift all that we need are real and imaginart parts of $\tilde a_2$, $\tilde b_1$, $\tilde a_{12}$ and, $\tilde b_8$, let's extract the amplitudes for both real and imaginary parts of amplitude. For real part
+To form Sivers shift, all we need are the real and imaginary parts of $\tilde a_2$, $\tilde b_1$, $\tilde a_{12}$, and $\tilde b_8$. Let's extract the amplitudes for both real and imaginary parts. For the real part
 \begin{align}
     \Aboxed{\tilde a^{\text{Re}}_2 = & \frac{1}{2}\mathfrak{Re}\{ R_{\Gamma(8)}\}^{[b^{1}\text{-even}]} }\\
     \Aboxed{\tilde b^{\text{Re}}_1 = & \frac{E_{N}}{2\mN^2 \eta v^3} \mathfrak{Im}\{ R_{\Gamma(4)}\}^{[b^{1}\text{-even}]}}
@@ -695,542 +697,282 @@ where,
     \Aboxed{R(\zetahat^2) \equiv 1- \sqrt{1 + \hat \zeta^{-2}}}
 \end{align}
 
-\section{Lattice calculations ($\tAmp_{2B}$ for $\eta=0$) (new data)}
-\subsubsection{$\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.45\linewidth]{Amp_plots/bLbT_A2B_b_even_P1_-1_eta_0.pdf}
-    \caption{Plot of  $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -1$ , $\eta=0$)}
-\end{figure}
-
-And below is the plot of $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$,
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A2B_b_even_P1_-1_eta_0.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A2B_b_even_P1_-1_eta_0.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=0$)}
-\end{figure}
-
-\subsubsection{$\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.45\linewidth]{Amp_plots/bLbT_A2B_b_odd_P1_-1_eta_0.pdf}
-    \caption{Plot of  $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -1$ , $\eta=0$)}
-\end{figure}
-
-\pagebreak
-
-And below is the plot of $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$,
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A2B_b_odd_P1_-1_eta_0.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A2B_b_odd_P1_-1_eta_0.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=0$)}
-\end{figure}
-
-
-
-\section{Lattice calculations (new data)}
-The lattice setup is $P^{\mu}=(E_N, -|\vec{P}^1|,0,0)$, $b^{\mu}=(0,b_{1},b_{2},0)$, $v^{\mu}=\pm n^{\prime}(0,v_{1},0,v_{3})$, $S^{\mu}=(0,0,0,1)$:
-\subsection{Sivers $\tAmp_{12B}$}
-\subsubsection{$\tAmp^{\text{Re}}_{12B}=\tAmp^{\text{(b-even)}}_{12B}$}
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A12B_b_even_P1_-1_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A12B_b_even_P1_-1_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Re}}_{12B}=\tAmp^{\text{(b-even)}}_{12B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -1$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A12B_b_even_P1_-2_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A12B_b_even_P1_-2_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Re}}_{12B}=\tAmp^{\text{(b-even)}}_{12B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -2$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A12B_b_even_P1_-3_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A12B_b_even_P1_-3_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Re}}_{12B}=\tAmp^{\text{(b-even)}}_{12B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -3$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A12B_b_even_P1_-4_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A12B_b_even_P1_-4_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Re}}_{12B}=\tAmp^{\text{(b-even)}}_{12B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -4$ , $\eta=8$)}
-\end{figure}
-\pagebreak
-Since $\tAmp_{12B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)$, below is the plot of $\tAmp^{\text{Re}}_{12B}=\tAmp^{\text{(b-even)}}_{12B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$,
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A12B_b_even_P1_-1_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A12B_b_even_P1_-1_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Re}}_{12B}=\tAmp^{\text{(b-even)}}_{12B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A12B_b_even_P1_-2_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A12B_b_even_P1_-2_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Re}}_{12B}=\tAmp^{\text{(b-even)}}_{12B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -2$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A12B_b_even_P1_-3_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A12B_b_even_P1_-3_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Re}}_{12B}=\tAmp^{\text{(b-even)}}_{12B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -3$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A12B_b_even_P1_-4_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A12B_b_even_P1_-4_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Re}}_{12B}=\tAmp^{\text{(b-even)}}_{12B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -4$ , $\eta=8$)}
-\end{figure}
-\pagebreak
-\subsubsection{$\tAmp^{\text{Im}}_{12B}=\tAmp^{\text{(b-odd)}}_{12B}$}
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A12B_b_odd_P1_-1_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A12B_b_odd_P1_-1_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Im}}_{12B}=\tAmp^{\text{(b-odd)}}_{12B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -1$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A12B_b_odd_P1_-2_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A12B_b_odd_P1_-2_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Im}}_{12B}=\tAmp^{\text{(b-odd)}}_{12B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -2$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A12B_b_odd_P1_-3_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A12B_b_odd_P1_-3_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Im}}_{12B}=\tAmp^{\text{(b-odd)}}_{12B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -3$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A12B_b_odd_P1_-4_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A12B_b_odd_P1_-4_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Im}}_{12B}=\tAmp^{\text{(b-odd)}}_{12B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -4$ , $\eta=8$)}
-\end{figure}
-\pagebreak
-And below is the plot of $\tAmp^{\text{Im}}_{12B}=\tAmp^{\text{(b-odd)}}_{12B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$,
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A12B_b_odd_P1_-1_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A12B_b_odd_P1_-1_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Im}}_{12B}=\tAmp^{\text{(b-odd)}}_{12B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A12B_b_odd_P1_-2_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A12B_b_odd_P1_-2_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Im}}_{12B}=\tAmp^{\text{(b-odd)}}_{12B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -2$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A12B_b_odd_P1_-3_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A12B_b_odd_P1_-3_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Im}}_{12B}=\tAmp^{\text{(b-odd)}}_{12B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -3$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A12B_b_odd_P1_-4_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A12B_b_odd_P1_-4_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Im}}_{12B}=\tAmp^{\text{(b-odd)}}_{12B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -4$ , $\eta=8$)}
-\end{figure}
-\pagebreak
-\subsubsection{$\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$}
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A2B_b_even_P1_-1_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A2B_b_even_P1_-1_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -1$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A2B_b_even_P1_-2_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A2B_b_even_P1_-2_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -2$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A2B_b_even_P1_-3_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A2B_b_even_P1_-3_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -3$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A2B_b_even_P1_-4_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A2B_b_even_P1_-4_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -4$ , $\eta=8$)}
-\end{figure}
-\pagebreak
-And below is the plot of $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$,
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A2B_b_even_P1_-1_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A2B_b_even_P1_-1_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A2B_b_even_P1_-2_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A2B_b_even_P1_-2_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -2$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A2B_b_even_P1_-3_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A2B_b_even_P1_-3_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -3$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A2B_b_even_P1_-4_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A2B_b_even_P1_-4_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -4$ , $\eta=8$)}
-\end{figure}
-\pagebreak
-\subsubsection{$\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$}
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A2B_b_odd_P1_-1_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A2B_b_odd_P1_-1_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -1$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A2B_b_odd_P1_-2_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A2B_b_odd_P1_-2_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -2$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A2B_b_odd_P1_-3_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A2B_b_odd_P1_-3_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -3$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bL_A2B_b_odd_P1_-4_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bT_A2B_b_odd_P1_-4_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of  $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different $b_{L}$ and $b_{T}$  ($P_{1} = -4$ , $\eta=8$)}
-\end{figure}
-\pagebreak
-And below is the plot of $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$,
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A2B_b_odd_P1_-1_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A2B_b_odd_P1_-1_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A2B_b_odd_P1_-2_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A2B_b_odd_P1_-2_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -2$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A2B_b_odd_P1_-3_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A2B_b_odd_P1_-3_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -3$ , $\eta=8$)}
-\end{figure}
-
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bP_A2B_b_odd_P1_-4_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Amp_plots/bsq_A2B_b_odd_P1_-4_eta_8.pdf}
-     \end{subfigure}
-        \caption{Plot of $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -4$ , $\eta=8$)}
-\end{figure}
-
-\subsection{Analysis}
-It appears that the imaginary parts of both $\tAmp^{\text{Im}}_{12B}$ and $\tAmp^{\text{Im}}_{2B}$ are compatible with zero, then the analysis reduced to 
+\section{Methode: Fit from $(b_{L}, b_{T})$ space to $(P\cdot b, b^2)$ space}
+We do fits in $(b_{L}, b_{T})$ space and then convert them into $(P\cdot b, b^2)$ amplitudes. For example for simple Gaussian fit inn $(b_{L}, b_{T})$ space, we model the real amplitudes as
 \begin{align}
-   \Longrightarrow~ \langle \vect{k}_y \rangle_{TU}(\vprp{\bvec}^2,\textcolor{blue}{x},\zetahat,\eta v \tcdot P) 
-	&\ \equiv\ \mN \frac{\tilde f_{1T}^{\perp(1)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)}{\tilde f_1^{(0)}(\vprp{\bvec}^2;\zetahat,\ldots,\eta v \tcdot P)}\\
- &=-m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \textcolor{red}{\tAmp_{12B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}}{\int d(b\cdot P)e^{ix(b\cdot P)}\textcolor{red}{\tAmp_{2B}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}}\\
- &=-m_{N} \frac{\int d(b\cdot P)e^{ix(b\cdot P)} \textcolor{red}{\tAmp_{12B}^{\text{Re}}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}}{\int d(b\cdot P)e^{ix(b\cdot P)}\textcolor{red}{\tAmp_{2B}^{\text{Re}}(\bvec^2,\bvec \tcdot P,(\bvec \tcdot P) R(\zetahat^2)/\mN^2,-1/(\mN\zetahat)^2,\eta v \tcdot P)}}.
+    \tAmp^{Re}_{iB}&=\gamma \exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \textcolor{red}{b_{T}^{2}}\right]}\\
+    &=\gamma \exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \left(\textcolor{blue}{b}^{2}-\textcolor{red}{b_{L}^{2}}\right)\right]}\\
+    &=\gamma \exp{\left[-\left(\alpha-\beta\right) \textcolor{red}{b_{L}^{2}}-\beta \textcolor{blue}{b}^{2}\right]}\\
+   \tAmp^{Re}_{iB} &=\gamma \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (\textcolor{blue}{P\cdot b})^{2}-\beta \textcolor{blue}{b}^{2}\right]}
 \end{align}
-\subsubsection{Fit}
-On fitting $\tAmp_{12B}^{\text{Re}}$ as in
+and we model the imaginary amplitudes as
+\begin{align}
+    \tAmp^{Im}_{iB}&=\gamma \textcolor{red}{b_{L}}\exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \textcolor{red}{b_{T}^{2}}\right]}\\
+    &=\gamma \textcolor{red}{b_{L}}\exp{\left[-\alpha \textcolor{red}{b_{L}^{2}}-\beta \left(\textcolor{blue}{b}^{2}-\textcolor{red}{b_{L}^{2}}\right)\right]}\\
+    &=\gamma \textcolor{red}{b_{L}}\exp{\left[-\left(\alpha-\beta\right) \textcolor{red}{b_{L}^{2}}-\beta \textcolor{blue}{b}^{2}\right]}\\
+    \tAmp^{Im}_{iB} &=\frac{\gamma}{P_{L}} (\textcolor{blue}{P\cdot b}) \exp{\left[-\frac{\left(\alpha-\beta\right)}{P_{L}^2} (\textcolor{blue}{P\cdot b})^{2}-\beta \textcolor{blue}{b}^{2}\right]}
+\end{align}
+
+\section{$\tAmp^{Re}_{2B}$: $\eta$-dependent Gaussian-type fit : $b\geq3$}
+\subsection{At fixed $\eta$}
+On fitting a Gaussian function at any given $\eta$
+\begin{align}
+    \tAmp^{Re}_{2B}=ae^{-cb_L^2}e^{-db_T^2}
+\end{align}
+we compared $\chi^2/DoF$. The differences in the parameters $c$ and $d$ will provide information about stability in $P.b$ space. 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\linewidth]{fitA12B.pdf}
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Gaussian_eta_p-1.eps}
+    \caption{Gaussian fit for each $\eta$, $b\geq3$ and $P_L=-1$}
+    \label{fig:placeholder}
 \end{figure}
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Pbfit_A12B_b_bnum_P1_-1_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{bsqfit_A12B_b_bnum_P1_-1_eta_8.pdf}
-     \end{subfigure}
-        \caption{Fit-Plot of $\tAmp^{\text{Re}}_{12B}=\tAmp^{\text{(b-even)}}_{12B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=8$)}
-\end{figure}
-
-And on fitting $\tAmp_{2B}^{\text{Re}}$ as in
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\linewidth]{fitA2B.pdf}
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Gaussian_eta_p-2.eps}
+    \caption{Gaussian fit for each $\eta$, $b\geq3$ and $P_L=-2$}
+    \label{fig:placeholder}
 \end{figure}
-\begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Pbfit_A2B_b_bnum_P1_-1_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{bsqfit_A2B_b_bnum_P1_-1_eta_8.pdf}
-     \end{subfigure}
-        \caption{Fit-Plot of $\tAmp^{\text{Re}}_{2B}=\tAmp^{\text{(b-even)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=8$)}
-\end{figure}
-
-And on fitting $\tAmp_{2B}^{\text{Im}}$ as in
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.8\linewidth]{fitA2B.pdf}
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Gaussian_eta_p-3.eps}
+    \caption{Gaussian fit for each $\eta$, $b\geq3$ and $P_L=-3$}
+    \label{fig:placeholder}
 \end{figure}
 \begin{figure}[h!]
-     \centering
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{Pbfit_A2B_b_bnum_P1_-1_eta_8.pdf}
-     \end{subfigure}
-     \begin{subfigure}[b]{0.45\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{bsqfit_A2B_b_bnum_P1_-1_eta_8.pdf}
-     \end{subfigure}
-        \caption{Fit-Plot of $\tAmp^{\text{Im}}_{2B}=\tAmp^{\text{(b-odd)}}_{2B}$ for different Lorentz invariant $P\cdot b$ and $(b)^2$  ($P_{1} = -1$ , $\eta=8$)}
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Gaussian_eta_p-4.eps}
+    \caption{Gaussian fit for each $\eta$, $b\geq3$ and $P_L=-4$}
+    \label{fig:placeholder}
+\end{figure}
+
+We also tried a Lorentzian fit for each $\eta$:
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta_p-1.eps}
+    \caption{Lorentzian fit for each $\eta$, $b\geq3$ and $P_L=-4$}
+    \label{fig:placeholder}
+\end{figure}
+
+\pagebreak
+
+~ 
+\pagebreak
+
+~ 
+\pagebreak
+
+\subsubsection{Finding best Fit: $b\geq3$}
+For $P_L=-1$, the range $7\leq\eta\leq10$ is found to be the most stable region for our analysis. We begin the fitting procedure with a simple Gaussian ansatz in $(b_L, b_T)$, which is a common baseline in lattice phenomenology. However, this model yields a high $\chi^2/\text{DoF} \approx 3.54$, indicating that a pure Gaussian decay is too steep to fit the data well.
+
+To address this, we systematically explore several functional variants. We find that introducing a power-law dependence significantly improves the quality of the fit. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/FitList_eta78910_p-1.eps}
+    \caption{Summary of various functional fits for $\tAmp^{Re}_{2B}$ for $7\leq\eta\leq10$, $b\geq3$ and $P_L=-1$}
+    \label{fig:placeholder}
+\end{figure}
+For $\tAmp^{Re}_{2B}$ for $7\leq\eta\leq10$, $b\geq3$ and $P_L=-1$, the picked model is
+{\color{blue}
+\begin{align}
+    \Aboxed{\tAmp^{Re}_{2B}(b_L, b_T,\eta)&=\frac{ae^{-f\eta}}{(1~+~c\eta^{g}b_{L}^2~+~db_{T}^{2})^{j}}}\\
+    \tAmp^{Re}_{2B}(b_L, b_T,\eta)&=\frac{[5.2(12)]e^{-[0.500(15)]\eta}}{(1~+~[0.034(17)]\eta^{[0.50(15)]}b_{L}^2~+~[0.103(29)]b_{T}^{2})^{[2.16(21)]}}
+\end{align}
+}
+
+\pagebreak
+To test the stability and range of $\eta$ and $b_{min}$, we fit:
+\begin{itemize}
+    \item \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq3.eps}
+    \caption{Lorentzian-type Power-Law fit for $\tAmp^{Re}_{2B}$ for $7\leq\eta\leq10$, $b\geq3$ and $P_L=-1$}
+    \label{fig:placeholder}
+     \end{figure}
+
+     \item \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq3.eps}
+    \caption{Lorentzian-type Power-Law fit for $\tAmp^{Re}_{2B}$ for $6\leq\eta\leq10$, $b\geq3$ and $P_L=-1$}
+    \label{fig:placeholder}
+     \end{figure}
+
+     \item \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta7-10_p-1_bleq2.eps}
+    \caption{Lorentzian-type Power-Law fit for $\tAmp^{Re}_{2B}$ for $7\leq\eta\leq10$, $b\geq2$ and $P_L=-1$}
+    \label{fig:placeholder}
+     \end{figure}
+
+     \item \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Gaussian_type_fit_Real_A2B/Lorentzian_eta6-10_p-1_bleq2.eps}
+    \caption{Lorentzian-type Power-Law fit for $\tAmp^{Re}_{2B}$ for $6\leq\eta\leq10$, $b\geq2$ and $P_L=-1$}
+    \label{fig:placeholder}
+     \end{figure}
+\end{itemize}
+
+\pagebreak
+\subsubsection{Let's fix the Power Law: $\frac{ae^{-f\eta}}{(1~+~c\eta^{g}b_{L}^2~+~db_{T}^{2})^{2}}$}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-1_bleq3.eps}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianPower2_eta6-10_p-2_bleq3.eps}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-10_p-3_bleq3.eps}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{Gaussian_type_fit_Real_A2B/LorentzianPower2_eta5-9_p-4_bleq3.eps}
 \end{figure}
 
 
+\pagebreak
+\subsection{Re A2B: Asymptotic in $\eta$ functions}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2BfitFT_eta_Asymptotic_P1.pdf}
+\end{figure}
+
+\pagebreak
+\subsection{Asymptotic in $\eta$ functions (Wider Fourier transform ansatzs)}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P1.pdf}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P2.pdf}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_P3.pdf}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{PowerLaw_etaAsymptotic/A2Bfit_widerFT_eta_Asymptotic_compareP123.pdf}
+\end{figure}
+
+
+\pagebreak
+~
+
+\pagebreak
+~
+
+\pagebreak
+~
+
+\pagebreak
+~
+
+
+\section{Simultaneous Fit with Covariance matrix}
+\subsection{Fit to $A^{Re}_{2B}$, $A^{Im}_{2B}$ \&  $A^{Re}_{12B}$}
+
+\subsubsection{$P_L=-1$}
+\input{SimultaneousFitsCov/Fit_Table_PL-1_bmin3}
+\input{SimultaneousFitsCov/Integration_Table_PL-1_bmin3}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-1.pdf}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-1.pdf}
+\end{figure}
+
+\pagebreak
+\subsubsection{$P_L=-2$}
+\input{SimultaneousFitsCov/Fit_Table_PL-2_bmin3}
+
+\input{SimultaneousFitsCov/Integration_Table_PL-2_bmin3}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-2.pdf}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-2.pdf}
+\end{figure}
+
+\pagebreak
+\subsubsection{$P_L=-3$}
+\input{SimultaneousFitsCov/Fit_Table_PL-3_bmin3}
+
+\input{SimultaneousFitsCov/Integration_Table_PL-3_bmin3}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-3.pdf}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-3.pdf}
+\end{figure}
+
+\pagebreak
+\subsubsection{$P_L=-4$}
+\input{SimultaneousFitsCov/Fit_Table_PL-4_bmin3}
+
+\input{SimultaneousFitsCov/Integration_Table_PL-4_bmin3}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-4.pdf}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{SimultaneousFitsCov/SimulFitCovMatrix-A12B-A2B-FT-3D_a_im-a_re-a_reA12B-c_im-c_re-c_reA12B-d_im-d_re-d_reA12B-f-j_im-j_re-j_reA12B-k1_re-k2_re__bmin3_eta610_PL-4.pdf}
+\end{figure}
+\pagebreak
+
+\subsection{$\hat{\zeta} \to \infty$ Extrapolation}
+We have $\{P_L, \hat{\zeta} \}=\{\{-1, 0.090772\}, \{-2, 0.294367\}, \{-3, 0.539684\}, \{-4, 0.785756\}\}$
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/SimulFit_Distinct_1_over_PL_bmin3_eta610_b29.0.pdf}
+\end{figure}
+
+\subsubsection{$\hat{\zeta} \to \infty$ Extrapolation at Amplitude Level}
+On extrapolating $A^{Re}_{2B}$, $A^{Im}_{2B}$ \&  $A^{Re}_{12B}$ to $\hat{\zeta} \to \infty$ limit we get\\
+1) Ansatz: $c+d/\hat{\zeta}$
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/Extrapolated_AmpLevel_Sivers_1_over_zetahat_bmin3_eta610_b29.0.pdf}
+\end{figure}
+
+2) Ansatz: $c+d/\hat{\zeta}^2$
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/Extrapolated_AmpLevel_Sivers_1_over_zetahatsq_bmin3_eta610_b29.0.pdf}
+\end{figure}
+
+\pagebreak
+\subsubsection{$\hat{\zeta} \to \infty$ Extrapolation at Sivers-shift ratio Level}
+On extrapolating $\langle k_{{y}} \rangle_{{TU}}$  to $\hat{\zeta} \to \infty$ limit we get\\
+1) Ansatz: $c+d/\hat{\zeta}$
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/Extrapolated_Sivers_1_over_zetahat_bmin3_eta610_b29.0 (1).pdf}
+\end{figure}
+
+2) Ansatz: $c+d/\hat{\zeta}^2$
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{SimultaneousFitsCov/Extrapolated_Sivers_1_over_zetahatsq_bmin3_eta610_b29.0.pdf}
+\end{figure}
 \end{document}
